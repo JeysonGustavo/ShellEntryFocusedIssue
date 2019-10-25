@@ -170,6 +170,12 @@
                   Title="About"
                   Icon="info.png"
                   ContentTemplate="{DataTemplate views:AboutPage}" />
+
+        <ShellContent Route="entrytest"
+                  Style="{StaticResource AboutShell}"
+                  Title="Entry Test"
+                  Icon="info.png"
+                  ContentTemplate="{DataTemplate views:EntryTest}" />
     </FlyoutItem>
 
     

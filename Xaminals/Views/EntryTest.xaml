@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xaminals.Views.EntryTest">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Steps to reproduce the issue:"
+                   VerticalOptions="Start" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="1- Put a breakpoint in the entryOne_Focused method"
+                   VerticalOptions="Start" 
+                   Margin="20,0,20,0"
+                   HorizontalOptions="StartAndExpand" />
+
+            <Label Text="2- IMPORTANT: Set some value in the entry one below. If a value is not be setted the error will not happen."
+                   Margin="20,0,20,0"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="StartAndExpand" />
+
+            <Label Text="3- Choose another screen, anyscreen you want."
+                   VerticalOptions="Start" 
+                   Margin="20,0,20,0"
+                   HorizontalOptions="StartAndExpand" />
+
+            <Label Text="4- Choose the Entry Test screen again"
+                   VerticalOptions="Start" 
+                   Margin="20,0,20,0"
+                   HorizontalOptions="StartAndExpand" />
+
+            <Label Text="The event focused of the entry one control is called again. Even when you put EntryOne.Unfocus(); in the OnDissapearing event."
+                   VerticalOptions="Start" 
+                   Margin="20,0,20,0"
+                   HorizontalOptions="StartAndExpand" />
+
+            <Label Text="At the second time, even if you don't put a value on entry one and repeat the steps 3 and 4 the event focused of the entry one will be called again."
+                   VerticalOptions="Start" 
+                   Margin="20,0,20,0"
+                   HorizontalOptions="StartAndExpand" />
+
+            <Label Text="Entry One" Margin=" 0,30,0,0"/>
+            <Entry  x:Name="entryOne"
+                    Focused="entryOne_Focused"/>
+
+            <Label Text="Entry Two" Margin=" 0,30,0,0"/>
+            <Entry x:Name="entryTwo"
+                   Focused="entryTwo_Focused"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
